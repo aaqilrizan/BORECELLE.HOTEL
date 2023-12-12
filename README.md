@@ -1,2 +1,2 @@
-# BORECELLE.HOTEL
- Hotel and Booking
+# Borecelle-Hotel
+ WDOS Assignment (Semester 2)

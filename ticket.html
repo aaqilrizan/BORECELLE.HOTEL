@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel and Adventure Booking</title>
+    <link rel="stylesheet" href="css/ticket.css">
+</head>
+<body>
+      
+    <header>
+        <div class="container" id="top">
+          <div class="gotop">
+            <a href="#top">&#8593;</a>
+          </div>
+        
+
+          <a href="index.html"><img src="images/logo.png" class="logo" alt="logo"></a>
+          
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="hotelbranch.html">Hotel Branches</a></li>
+              <li><a href="adventure.html">Adventures</a></li>
+              <li><a href="resturant.html">Restaurants</a></li>
+              <li><a href="ticket.html">Booking</a></li>
+              <li><a class="ts" href="wedding.html">Events</a>
+                <ul class="dropdown">
+                <li><a href="wedding.html">weddings</a></li>
+                <li><a href="parties.html">parties</a></li>
+                </ul>
+              </li>
+            </ul>
+            
+        </nav>
+        </div>
+    </header>
+    <h1>Hotel Booking</h1>
+    <form id="hotelForm">
+        First name: <input type="text" name="firstName" required><br>
+        Last name: <input type="text" name="lastName" required><br>
+        Email: <input type="email" name="email" required><br>
+        Phone number: <input type="tel" name="phone" required><br>
+        Room choice: 
+        <select name="roomType">
+            <option value="single">Single - 25000 LKR</option>
+            <option value="double">Double - 35000 LKR</option>
+            <option value="triple">Triple - 40000 LKR</option>
+        </select><br>
+
+        Stay duration: <input type="number" name="stayDuration" min="1" value="1"> days<br>
+        Check-in date: <input type="date" name="checkInDate"><br>
+        Check-out date: <input type="date" name="checkOutDate"><br>
+
+        Number of rooms: <input type="number" name="numberOfRooms" min="1" value="1"><br>
+        Number of adults: <input type="number" name="adults" min="1" value="1"><br>
+        Number of children: <input type="number" name="children" min="0" value="0"><br>
+        Extra bed: <input type="checkbox" name="extraBed"><br>
+        
+        Extra requirements: 
+        <input type="checkbox" name="wifi"> WiFi
+        <input type="checkbox" name="poolView"> Pool View
+        <input type="checkbox" name="gardenView"> Garden View<br>
+        <br>
+
+        Promo code: <input type="text" name="promoCode"><br>
+        <button type="submit">Book Now</button>
+        <button id="checkLoyalty">Check Loyalty Points</button>
+        <h2>Your Loyalty Points</h2>
+        <div id="loyaltyPoints"></div>
+    </form>
+</div>
+<br>
+        <!-- Button to Show Diving Booking Form -->
+<button id="bookDiving">Book Diving Adventure</button>
+
+<!-- Diving Booking Form (Initially Hidden) -->
+<div id="divingForm" style="display:none;">
+    <form id="divingBookingForm">
+        <label>
+            <input type="radio" name="customerType" value="local" checked> Local
+        </label>
+        <label>
+            <input type="radio" name="customerType" value="foreign"> Foreign
+        </label><br>
+        Number of Adults: <input type="number" name="adultsForDiving" min="1" value="1"><br>
+        Number of Kids: <input type="number" name="kidsForDiving" min="0" value="0"><br>
+        <label>
+            Need a guide? <input type="checkbox" name="needGuide">
+        </label><br>
+        <button type="submit">Confirm Diving Booking</button>
+    </form>
+</div>
+
+    <!-- Display Area for Diving Booking Summary -->
+    <h2>Your Diving Booking</h2>
+    <div id="divingBookingDetails"></div>
+
+    <!-- i Booking Form -->
+    <h2>Your Booking</h2>
+    <div id="bookingDetails"></div>
+
+    <button id="addToFavorites">Add to Favorites</button>
+    <h2>Your Favorite Booking</h2>
+    <div id="favoriteDetails"></div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
